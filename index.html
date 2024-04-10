@@ -27,6 +27,7 @@
   The goal of this code is to upload an image that is a different color next to the original one.
  
   Known Issues:
+ Canvas wasn't displaying correctly.
  There are no known issues. 
 -->
 
@@ -101,16 +102,7 @@
           /*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
- <canvas id="blueCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
-      <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
-        var canvas = document.getElementById('blueCanvas');
-        var context = canvas.getContext("2d");
-        context.font = '20pt Calibri';
-        context.fillStyle = "black";
-        context.fillText("Original image will go here", 10, 20);
-      </script>
-         
-          
+
           
         } // end of img.onload
         
@@ -140,7 +132,7 @@
         <input type="file" id="fileInput" STYLE="background-color: #FF6600;">
       </div>
       <div id="messageDisplayArea"></div>
-      
+         
       <canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
       <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
         var canvas = document.getElementById('myCanvas');
@@ -148,6 +140,14 @@
         context.font = '20pt Calibri';
         context.fillStyle = "black";
         context.fillText("Original image will go here", 10, 20);
+      </script>
+      <canvas id="blueCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
+      <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
+        var canvas = document.getElementById('blueCanvas'); //This creates the 2nd canvas
+        var context = canvas.getContext("2d");
+        context.font = '20pt Calibri';//establishes font
+        context.fillStyle = "black";//establishes color 
+        context.fillText("Original image will go here", 10, 20);//estabishes where image goes on canvas
       </script>
 
     </div><!-- /content -->
