@@ -103,7 +103,15 @@
 
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
 
-          
+         var canvas2 = document.getElementById('canvas2);
+         var context2 = canvas2.getContext('2d);
+         //allows for second canvas to actually show image.
+
+
+         const imageData = context.getImageData(0, 0, 600, 500);
+         const data = imageData.data;
+         //image data is taken by canvas so that i can later make the picture blue by messing with the pixels.
+       
         } // end of img.onload
         
         img.src = reader.result;
