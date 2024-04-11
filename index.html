@@ -104,7 +104,7 @@
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
 
          var canvas2 = document.getElementById('canvas2);
-         var context2 = canvas2.getContext('2d');
+         var ctx2 = canvas2.getContext('2d');
          //allows for second canvas to actually show image                             
          //left off the two for 2nd canvas so added that 
 
@@ -119,7 +119,7 @@
          }
          //forgot to add the bracket so i added in.
 
-         context2.putImageData(imageData, 0, 0);//signifies that the image is diplayed on canvas after edits.
+         ctx2.putImageData(imageData, 0, 0);//signifies that the image is diplayed on canvas after edits.
           
         } // end of img.onload
         
@@ -161,7 +161,7 @@
      
     <canvas id="canvas2" width="600" height="500" style="border:1px solid #d3d3d3;"></canvas>
     <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
-        var canvas2 = document.getElementById('Canvas2'); //This creates the 2nd canvas, realized that the number 2 is required.
+        var canvas2 = document.getElementById('canvas2'); //This creates the 2nd canvas, realized that the number 2 is required.
         var context2 = canvas2.getContext("2d");
         context2.font = '20pt Calibri';//establishes font
         context2.fillStyle = "black";//establishes color 
