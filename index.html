@@ -102,18 +102,23 @@
           /*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
-     var canvas2 = document.getElementById('myCanvas2');
-     var context2 = canvas2.getContext("2d");
-     var imageData = context.getImageData(0, 0, 600, 500)
-     var canvasData = imageData.data
+    var imageData = context.getImageData(0, 0, 600, 500); //grabs the image from above
+				var data = imageData.data;
 
-        |for(var i = 0; i < canvasData.length; i += 4) {
-            canvasData[i] = 0; //removes red pixels     
-            canvasData[i + 1] = 0;//removes green pixels
-         }
-       //helps select for blue pixels
-         context2.putImageData(imageData, 0, 0);//signifies that the image is diplayed on canvas after edits.
-          
+				// Loop through the pixel data and convert each pixel to show only blue pixels
+				for (var i = 0; i < data.length; i += 4) {
+					var r = data[i]; //variable for red pixels data
+					var g = data[i + 1]; //variable for green pixel data
+					var b = data[i + 2]; //variable for blue pixel data
+					
+					data[i] = 0; // sets red pixels to 0, so red will not show
+					data[i + 1] = 0; // sets green pixels to 0, so green will not show
+					// blue pixels stay the same
+					
+				}
+
+				// Update the canvas with the new grayscale pixel data
+				context2.putImageData(imageData, 0, 0);
         } // end of img.onload
         
         img.src = reader.result;
