@@ -102,11 +102,10 @@
           /*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
-      <script>
      var canvas2 = document.getElementById('myCanvas2);
      var context2 = canvas2.getContext("2d");
      var imageData = context.getImageData(0, 0, 600, 500)
-     var canvasData = imageData.data//allows for second canvas to actually show image       
+     var canvasData = imageData.data
 
         |for(var i = 0; i < canvasData.length; i += 4) {
             canvasData[i] = 0; //removes red pixels     
