@@ -102,19 +102,16 @@
           /*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
+     var canvas2 = document.getElementById('myCanvas2);
+     var context2 = canvas2.getContext("2d");
+     var imageData = context.getImageData(0, 0, 600, 500)
+     var canvasData = imageData.data//allows for second canvas to actually show image       
 
-         var canvas2 = document.getElementById('myCanvas2);
-         var context2 = canvas2.getContext('2d');
-         var imageData = context.getImageData(0, 0, 600, 500)
-         var canvasData = imageData.data
-         //allows for second canvas to actually show image                             
-         //left off the two for 2nd canvas so added that
-
-        |for(var i = 0; i <canvasData.length; i += 4) {
-                 canvasData[i] = 0; //removes red pixels     
-                 canvasData[i + 1] = 0;//removes green pixels
-              }
-         //forgot to add the bracket so i added in.
+        |for(var i = 0; i < canvasData.length; i += 4) {
+            canvasData[i] = 0; //removes red pixels     
+            canvasData[i + 1] = 0;//removes green pixels
+         }
+       //helps select for blue pixels
          context2.putImageData(imageData, 0, 0);//signifies that the image is diplayed on canvas after edits.
           
         } // end of img.onload
