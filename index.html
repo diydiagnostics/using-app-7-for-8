@@ -105,8 +105,8 @@
 
          var canvas2 = document.getElementById('canvas2);
          var context2 = canvas2.getContext('2d);
-         //allows for second canvas to actually show image.
-
+         //allows for second canvas to actually show image                             
+         //left off the two for 2nd canvas so added that 
 
          const imageData = context.getImageData(0, 0, 600, 500);
          const data = imageData.data;
@@ -116,8 +116,8 @@
                  data[i] = 0 - data[i]; //removes red pixels     
                  data[i + 1] = 0 - data[i + 1];//removes green pixels
                  data[i + 2] = 255 - data[i + 2];//removes blue pixels
-
-         
+         }
+         //forgot to add the bracket so i added in.
 
          context2.putImageData(imageData, 0, 0);//signifies that the image is diplayed on canvas after edits.
           
