@@ -27,7 +27,7 @@
   The goal of this code is to upload an image that is a different color next to the original one.
  
   Known Issues:
- Canvas wasn't displaying correctly.
+ Canvas wasn't displaying correctly, but was fixed.
  There are no known issues. 
 -->
 
@@ -149,8 +149,8 @@
       <div id="messageDisplayArea"></div>
          
       <canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
-      <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
-        var canvas = document.getElementById('myCanvas');
+      <script> /* initiates the canvas and puts the text on the canvas "myCanvas" */
+        var canvas = document.getElementById('myCanvas');//these codes create the 1st canvas 
         var context = canvas.getContext("2d");
         context.font = '20pt Calibri';
         context.fillStyle = "black";
